@@ -1,26 +1,30 @@
 <!--index.wxml-->
 <view class='main'>  
-  <view class='empty'></view>
-  <view class='itemView'>学号:
-    <input class='input' name='userId' placeholder='请输入学号' 
+  <view class='empty' />
+  <form bindsubmit='submitBtnClick' bindreset='resetBtnClick' >
+    <view class='itemView'>学号：
+      <input class='input' name='userId' placeholder='请输入学号' 
     bindinput='userIdInput' value='{{userId}}' />
-    <text class='xing' space='ensp'> *</text>
-  </view>
+      <text class='xing' space='ensp'> *</text>
+    </view>
 
-  <view class='itemView'>姓名:
-    <input class='input' name='userName' placeholder='请输入姓名' 
-    bindinput='userNameInput' value='{{userName}}' />
-    <text class='xing' space='ensp'> *</text>
-  </view>
+    <view class='itemView'>姓名：
+      <input class='input' name='userName' placeholder='请输入姓名' 
+      bindinput='userNameInput' value='{{userName}}' />
+      <text class='xing' space='ensp'> *</text>
+    </view>
 
-  <view class='itemView'>班级:
-    <input class='input' name='userClass' placeholder='请输入班级' 
-    bindinput='userClassInput' value='{{userClass}}' />
-    <text class='xing' space='ensp'> *</text>
-  </view>
+    <view class='itemView'>班级：
+      <input class='input' name='userClass' placeholder='请输入班级'
+      bindinput='userClassInput' value='{{userClass}}' />
+      <text class='xing' space='ensp'> *</text>
+    </view>
 
-  <button class="submitBtn" bindtap="submitBtnClick">提交</button>
-  <button class="resetBtn" bindtap="resetBtnClick">重置</button>
+    <view class='btn-area'>
+      <button class='submitBtn' form-type='submit'>提交</button>
+      <button class='resetBtn' form-type='reset'>重置</button>
+    </view>
+  </form>
 </view>
 
 

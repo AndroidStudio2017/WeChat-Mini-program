@@ -34,7 +34,9 @@ Page({
         if(res.statusCode===200){
           if(res.data.code==200){
             console.log(res.data.content)
-
+            wx.showToast({
+              title: res.data.content,
+            })
           }else{
             wx.showToast({
               title: res.data.content,
